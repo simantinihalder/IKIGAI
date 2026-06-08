@@ -1,0 +1,127 @@
+:root {
+  --bg-primary: #0D0D0D;
+  --bg-secondary: #161616;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-gold: #D4AF37;
+  --btn-crimson: #8C0327;
+  --btn-crimson-hover: #A00A33;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+  --spacing-section: 8rem;
+  --spacing-element: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: var(--spacing-section) 0;
+}
+
+.gold-text {
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.serif-heading {
+  font-family: var(--font-serif);
+}
+
+.crimson-btn {
+  background-color: var(--btn-crimson);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  border: 1px solid var(--btn-crimson);
+}
+
+.crimson-btn:hover {
+  background-color: var(--btn-crimson-hover);
+  border-color: var(--btn-crimson-hover);
+}
+
+.outline-btn {
+  background-color: transparent;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.outline-btn:hover {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Animations & Micro-interactions */
+.hover-zoom {
+  overflow: hidden;
+}
+
+.hover-zoom img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+.hover-lift {
+  transition: transform 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
